@@ -1,0 +1,11 @@
+sudo: required
+language: generic
+
+services: 
+    - docker
+
+before_install:
+    - docker build -t gringlas/docker-training-react -f Dockerfile.dev .
+
+script:
+    - docker run -e CI=true gringlas/docker-training-react npm run test
