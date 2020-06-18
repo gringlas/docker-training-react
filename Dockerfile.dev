@@ -1,0 +1,12 @@
+FROM node:alpine
+
+WORKDIR '/app'
+
+COPY package.json .
+# created node_modules in container at /app/node_modules
+RUN npm install
+
+# copy all files from host folder into workdir
+COPY . .
+
+CMD ["npm", "run", "start"]
