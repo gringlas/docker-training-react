@@ -13,7 +13,7 @@ script:
 deploy: 
     provider: elasticbeanstalk
     region: "eu-central-1"
-    app: "docker-react-trainig"
+    app: "docker-react-training"
     env: "DockerReactTraining-env"
     bucket_name: "elasticbeanstalk-eu-central-1-715383853098"
     bucket_path: "docker-training-react"
